@@ -78,5 +78,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux
 
 mongo_data/
-commands.md
-docker.md
+src/03-mongosh/commands.md
