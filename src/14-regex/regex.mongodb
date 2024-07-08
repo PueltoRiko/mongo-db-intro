@@ -1,0 +1,20 @@
+use("store")
+
+// db.inventory.find({ "item.description": "Single line description."})
+
+// Consultas:
+
+// exacta (/)
+// db.inventory.find({ "item.description": { $regex: /line/ } })
+
+// ingnorando MAYÚSCULAS y minúsculas (/i)
+// db.inventory.find({ "item.description": { $regex: /LINE/i } })
+
+// terminados en ($/)
+// db.inventory.find({ "item.description": { $regex: /line$/i } })
+
+// iniciado en (^)
+// db.inventory.find({ "item.description": { $regex: /^single/i } })
+
+// iniciado en e ignorando los saltos de líneas (^.../im)
+// db.inventory.find({ "item.description": { $regex: /^s/im } })

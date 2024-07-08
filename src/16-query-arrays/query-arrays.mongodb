@@ -1,0 +1,29 @@
+use("store")
+
+// Operators for values & arrays
+// $in: or
+// db.inventory.find({ qty: { $in: [20, 25] } })
+// db.inventory.find({ tags: { $in: ["book", "electronics"] } })
+
+// $nin: not
+// db.inventory.find({ qty: { $nin: [20, 25] } })
+// db.inventory.find({ tags: { $nin: ["book", "electronics"] } })
+
+// Operators for arrays
+// $all: and
+// db.inventory.find({ tags: { $all: ["book", "school"] } })
+
+// $size: qty of elements
+// db.inventory.find({ tags: { $size: 2 } })
+
+// $elementMatch:
+// db.survey.find({ results: { $elemMatch: { product: "xyz" } } })
+db.survey.find({
+  results: {
+    $elemMatch: {
+      product: "xyz",
+      score: { $gte: 7 }
+    }
+  }
+})
+

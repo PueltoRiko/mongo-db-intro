@@ -1,0 +1,16 @@
+use("store")
+
+// Using $eq
+
+// Manera implícita
+// db.inventory.find({ qty: 20 })
+
+// Manera explícita
+// db.inventory.find({ qty: { $eq: 20 } })
+
+// db.inventory.find({ "item.name": "ab" })
+// db.inventory.find({ "item.code": "123" })
+
+
+// Using $ne
+db.inventory.find({ qty: { $ne: 20 } })
